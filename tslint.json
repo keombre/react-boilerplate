@@ -1,0 +1,16 @@
+{
+    "extends": ["tslint:latest", "tslint-react"],
+    "rules": {
+      "semicolon": [true, "never"],
+      "arrow-parens": [true, "always"],
+      "curly": [true, "as-needed"],
+      "indent": [true, "spaces", 2],
+      "quotemark": [true, "single", "avoid-escape", "avoid-template"],
+      "space-before-function-paren": ["error", {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "ignore"
+      }],
+      "jsx-wrap-multiline": false
+    }
+}
