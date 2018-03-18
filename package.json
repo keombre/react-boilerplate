@@ -4,7 +4,7 @@
   "license": "MIT",
   "description": "Boilerplate for React in linted typescript with Sass",
   "scripts": {
-    "start": "webpack-dev-server --hot",
+    "start": "webpack-dev-server --hot --progress --color",
     "build": "webpack",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "pretest": "npm run lint",
@@ -14,7 +14,6 @@
     "@types/jest": "^22.2.0",
     "awesome-typescript-loader": "^3.4.1",
     "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",

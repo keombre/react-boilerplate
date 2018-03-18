@@ -5,7 +5,17 @@
     "noImplicitAny": true,
     "module": "commonjs",
     "target": "es6",
-    "jsx": "react"
+    "jsx": "react",
+    "removeComments": true
   },
-  "include": ["./src/**/*"]
+  "include": ["./src/**/*"],
+  "awesomeTypescriptLoaderOptions": {
+    "forceIsolatedModules": true,
+    "useBabel": true,
+    "useCache": true,
+    "useTranspileModule": true,
+    "reportFiles": [
+      "src/**/*.{ts,tsx}"
+    ]
+  }
 }

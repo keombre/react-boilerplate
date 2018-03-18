@@ -37,7 +37,7 @@ module.exports = {
               emitErrors: true,
             }
           },
-          'babel-loader?cacheDirectory=true',
+          /*'babel-loader?cacheDirectory=true',*/
           'awesome-typescript-loader'
         ],
       },

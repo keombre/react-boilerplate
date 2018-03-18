@@ -6,7 +6,7 @@ const App = () => (
   <section className='section'>
     <div className='container'>
       <h1 className='title'>
-        Hello World
+        Hello World!
       </h1>
       <p className='subtitle'>
         <Counter />
