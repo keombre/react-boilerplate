@@ -12,5 +12,8 @@
         "asyncArrow": "ignore"
       }],
       "jsx-wrap-multiline": false
-    }
+    },
+    "exclude": [
+      "node_modules"
+    ]
 }
