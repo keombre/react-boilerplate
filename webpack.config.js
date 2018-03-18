@@ -15,7 +15,7 @@ module.exports = {
 
   entry: {
     app: "./src/index.tsx",
-    vendor: ["react", "react-dom"]
+    vendor: ["react", "react-dom", "bulma"],
   },
 
   output: {
@@ -42,7 +42,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.scss$/,
+        test: /\.(scss|sass)$/,
         use: extractSass.extract({
           use: [
             {
@@ -58,11 +58,20 @@ module.exports = {
           fallback:'style-loader'
         })
       },
+      {
+        test: /\.(svg|eot|woff|woff2|ttf|png|jpg|gif|txt)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {}  
+          }
+        ]
+      }
     ],
   },
 
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx', '.scss'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.scss', '.sass'],
     modules: [
       'node_modules'
     ],
@@ -78,6 +87,7 @@ module.exports = {
       }
     }),
     new webpack.optimize.CommonsChunkPlugin({ name: 'vendor' }),
+    new webpack.optimize.CommonsChunkPlugin({ name: 'bulma' }),
     new webpack.optimize.CommonsChunkPlugin({ name: 'manifest' }),
 
     new webpack.optimize.CommonsChunkPlugin({
